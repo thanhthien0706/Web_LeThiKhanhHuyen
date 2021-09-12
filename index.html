@@ -66,7 +66,7 @@
 
                     <div class="box_enforcement">
 
-                        <form action="#" class="box_from">
+                        <form action="#" class="box_from item_layout">
                             <div class="box_form--content">
                                 <input type="text" placeholder="SEARCH...">
                                 <button class="btn_search">
@@ -75,17 +75,80 @@
                             </div>
                         </form>
 
-                        <div class="box_login">
-                            <button class="btn_login">
+                        <div class="box_login item_layout">
+                            <button class="btn_login" onclick="openUser()">
                                 <div class="icon">
                                     <i class="fas fa-user"></i>
                                 </div>
-                               <p class="text_login">login</p>
+                               <p class="text_login">Log In</p>
                             </button>
                         </div>
 
-                        <div class="box_cart">
-                            <i class="fas fa-shopping-cart"></i>
+                        <div class="box_cart item_layout">
+                            <i class="fas fa-shopping-cart " onclick="openNav('openCart')"></i>
+                        </div>
+
+                        <!-- box chứa cart -->
+                        <div class="box_cart--open">
+                            <!-- open-cart -->
+                            <div id="openCart" class="box_openCart">
+                                <div class="box_header">
+                                    <i class="fas fa-chevron-right" onclick="closeNav('openCart')" ></i>
+                                    <p class="text_header">Cart</p>
+                                </div>
+                                <div class="box_body">
+                                    <p class="text_body">
+                                        Cart is empty
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- layout mờ -->
+                            <div id="modaCart" class="box_modal--cart" onclick="closeNav('openCart')"></div>
+                        </div>
+
+                        <!-- box chứa login -->
+
+                        <!-- face và google -->
+                        <div id="boxLogin" class="box_login--open">
+
+                            <div class="box_icon_close">
+                                <i class="fas fa-times" onclick="closeUser()"></i>
+                            </div>
+
+                            <div id="mainUser" class="box_main--user">
+                                <div class="box-header">
+                                    <h2 class="header-title">LOG IN</h2>
+                                    <p class="header-text" > <span class="text_chuyen">New to this site?</span> <a href="#" class="chuyen_doi--user" >Sign Up</a> </p>  
+                                </div>
+                                <div class="box-body">
+                                    <div class="box_with box_with--1">
+                                        <i class="fab fa-facebook-square"></i>
+                                        <p class="text-content"> <span class="text_chuyen_with">Log in</span> with Facebook</p>
+                                    </div>
+                                    <div class="box_with box_with--2">
+                                        <i class="fab fa-google"></i>
+                                        <p class="text-content"> <span class="text_chuyen_with">Log in</span> with Google</p>
+                                    </div>
+                                </div>
+                                <div class="box-footer">
+                                    <span class="text">or</span>
+                                    <button id="btnChuyenEmail" class="btn-with-Email"><span class="text_chuyen_with">Log in</span> with Email</button>
+                                </div>
+                            </div>
+
+                            <!-- email -->
+
+                            <div id="withEmail" class="box_main--email">
+                                <div class="box-header">
+                                    <h2 class="header-title">LOG IN</h2>
+                                    <p class="header-text" >New to this site? <a href="#" class="chuyen_doi--user" >Sign Up</a> </p>  
+                                </div>
+                                <div class="box-body">
+                                </div>
+                                <div class="box-footer">
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -105,6 +168,8 @@
         </footer>
 
     </div>
+
+    <script src="./access/js/my_js.js"></script>
 
 </body>
 
