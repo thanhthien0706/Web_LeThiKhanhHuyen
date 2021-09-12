@@ -106,24 +106,45 @@ function chuyenCheDo(){
 
 
 // cộng sản phẩm 
-var itemPluss = document.querySelector('.box_add--sp .item_pluss');
-var itemMinus = document.querySelector('.box_add--sp .item_minus');
-var inputAddSp = document.querySelector('.input_add--sp')
 
-var maxInputAdd = Number(inputAddSp.max);
-var minInputAdd = Number(inputAddSp.min);
-var stepInputAdd = Number(inputAddSp.step);
+function plussSL(idInput){
+    var inputAddSp = document.querySelector(idInput);
+    var maxInputAdd = Number(inputAddSp.max);
+    var minInputAdd = Number(inputAddSp.min);
+    var stepInputAdd = Number(inputAddSp.step);
+    var giaTriHienTai = Number(inputAddSp.value);
 
-itemPluss.onclick = function(e){
-    if(minInputAdd < maxInputAdd){
-        minInputAdd = minInputAdd+stepInputAdd;
-        inputAddSp.value = minInputAdd;
+    if(giaTriHienTai < maxInputAdd){
+        giaTriHienTai += stepInputAdd;
+        inputAddSp.value = giaTriHienTai;
     }
 }
 
-itemMinus.onclick = function(e){
-    if(minInputAdd >= 1){
-        minInputAdd = minInputAdd-stepInputAdd;
-        inputAddSp.value = minInputAdd;
+function minusSL(idInput){
+    var inputAddSp = document.querySelector(idInput);
+    var maxInputAdd = Number(inputAddSp.max);
+    var minInputAdd = Number(inputAddSp.min);
+    var stepInputAdd = Number(inputAddSp.step);
+    var giaTriHienTai = Number(inputAddSp.value);
+
+    if(giaTriHienTai > minInputAdd){
+        giaTriHienTai -= stepInputAdd;
+        inputAddSp.value = giaTriHienTai;
     }
 }
+
+// open mess chat
+
+var btnMessChat = document.querySelector('.btn_chat');
+var boxChat = document.querySelector('.box_main_chat')
+
+function openboxChat() {
+    boxChat.style.display='block';
+    btnMessChat.style.display='none';
+}
+
+function closeboxChat() {
+    boxChat.style.display='none';
+    btnMessChat.style.display='block';
+}
+
