@@ -2,6 +2,10 @@
 /* CSS HEADER */
 /* ============================ */
 
+#box_main{
+    
+}
+
 .header_main{
     padding: 40px 0 0 0;
 }
@@ -398,13 +402,14 @@
 }
 
 /* với emails */
+
 .box_login--open .box_main--email{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:center; 
     margin-top: 30px;
-    /* display: none; */
+    display: none;
 }
 
 .box_login--open .box_main--email .box-header{
@@ -426,7 +431,354 @@
     color: #424242;
 }
 
-.box_login--open .box_main--email .box-header .header-text .chuyen_doi--user{
+.box_login--open .box_main--email .box-header .header-text .text_email{
     color: #839C80;
     text-decoration: none;
+}
+
+.box_main--email .box-body{
+    margin-bottom: 36px;
+}
+
+.box_main--email .box-body .form_emai{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box_main--email .box-body .form_emai .box_input{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    margin-bottom: 36px;
+    min-width: 322px;
+}
+
+.box_main--email .box-body .form_emai .box_input .lb{
+    margin-bottom: 10px;
+    color:#92a88f;
+}
+
+.box_main--email .box-body .form_emai .box_input .input{
+    border: none;
+    background: none;
+    border-bottom: 1px solid #92a88f;
+    outline: none;
+    color: #424242;
+}
+
+.box_main--email .box-body .form_emai .btn_submit{
+    padding: 16px 0;
+    outline: none;
+    border: none;
+    background-color: #92a88f;
+    color: white;
+    font-size: 18px;
+}
+
+.box_main--email .box-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_main--email .box-footer .box_footer--with{
+    margin-bottom: 30px;
+    padding: 0 108px;
+    position: relative;
+    color: #979797;
+}
+
+.box_main--email .box-footer .box_footer--with::after{
+    content:"";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background-color: #92a88f;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.box_main--email .box-footer .box_footer--with::before{
+    content:"";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background-color: #92a88f;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.box_main--email .box-footer .item_icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_main--email .box-footer .item_icon .item{
+    font-size: 30px;
+    color: #3b5998;
+    margin-right: 35px;
+}
+
+.box_main--email .box-footer .item_icon img{
+    width: 28px;
+    height: 28px;
+}
+
+/* ============================ */
+/* CSS BODY CONTENT*/
+/* ============================ */
+
+.box_line{
+    position: relative;
+}
+
+.box_line:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--col_1);
+    bottom: 0;
+    left: 0;
+}
+
+.box_content_main{
+    padding: 60px 0 0;
+    /* position: relative; */
+}
+
+.box_content_main .box_header--content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 64px;
+}
+
+.box_content_main .box_header--content h1{
+    text-align: center;
+    margin-bottom: 38px;
+    letter-spacing: 0.3em;
+    font-size: 55px;
+    font-weight: 800;
+    color: var(--col_1);
+    text-shadow: #ffffff 3px 3px 0px, rgb(0 0 0 / 20%) 6px 6px 0px;
+}
+
+.box_content_main .box_header--content p{
+    text-align: center;
+    font-size :21px;
+    letter-spacing:0.15em;
+    color: var(--col_1);
+}
+
+/* css sản phẩm */
+
+.box_content_main .box_content{
+    min-height: 570px;
+}
+
+.box_content_main .box_content .box_main--img{
+    width: 100%;
+    height: 413px;
+    overflow: hidden;
+    position: relative;
+    /* margin-bottom: 20px; */
+}
+
+.box_content_main .box_content .box_main--img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s ease-in-out;
+
+}
+
+.box_content_main .box_content .box_main--img .box_view--inf{
+    position: absolute;
+    bottom: -55px;
+    width: 100%;
+    text-align: center;
+    background-color:rgba(255,255,255,0.5);
+    padding: 20px 0;
+    transition: 0.6s ease-in-out;
+}
+
+.box_content_main .box_content .box_main--img .box_view--inf .text--view{
+    font-size: 14px;
+    color: #000;
+}
+
+.box_content_main .box_content .box_main--img:hover img{
+    cursor: pointer;
+    transform: scale(1.3);
+    cursor: pointer;
+
+}
+
+.box_content_main .box_content .box_main--img:hover .box_view--inf{
+    bottom: 0;
+}
+
+/* css content text sản phẩm */
+
+.box_content .box_text_content{
+    padding: 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box_content .box_text_content .text--name{
+    margin-bottom: 12px;
+    color: #424242;
+    font-size: 16px;
+}
+
+.box_content .box_text_content .text--price{
+    color: var(--col_1);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.box_content .box_text_content .box_add--sp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color:white;
+    border: 1px solid #000;
+    margin-bottom: 12px;
+}
+
+.box_content .box_text_content .box_add--sp .input_add--sp{
+    text-align:center;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.box_content .box_text_content .box_add--sp .item{
+    font-size:14px;
+    cursor: pointer;
+}
+
+.box_content .box_text_content .btn_addSp{
+    padding: 8px 0;
+    background-color: var(--col_1);
+    border: none;
+    font-weight: 800;
+    color: white;
+    outline: none;
+    transition: 0.8s;
+
+}
+
+.box_content .box_text_content .btn_addSp:hover{
+    opacity: 0.9;
+}
+
+
+/* ================================ */
+/* FOOTER */
+/* ================================ */
+
+.footer_main{
+    padding: 50px 0;
+}
+
+.footer_main .box_main--content  .title_footer{
+    margin-bottom: 30px;
+    color: #424242;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.footer_main .box_main--content  a{
+    text-decoration: none;
+}
+
+.footer_main .box_main--content .text_footer{
+    margin-bottom: 20px;
+    color: #424242;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.footer_main .box_main--content  .text_footer:hover{
+    color: #b3b39d;
+}
+
+.footer_main .box_main--content  .inputEmail{
+    padding: 20px ;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer_main .box_main--content .inputEmail .lbName{
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #424242;
+}
+
+.footer_main .box_main--content .inputEmail .inputText{
+    margin-bottom:10px;
+    width: 100%;
+    padding:10px;
+    border:2px solid red;
+}
+
+.footer_main .box_main--content .inputEmail .btnSubmit{
+    padding: 10px 0;
+    border: none;
+    background-color: var(--col_1);
+    font-size: 16px;
+    font-weight: 800;
+    color: white;
+    letter-spacing:2px
+}
+
+.footer_main .icon_contact{
+    text-align: center;
+}
+
+.footer_main .icon_contact .icon_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:30px
+}
+
+.footer_main .icon_contact .icon_list .item{
+    margin-right: 20px;
+}
+
+.footer_main .icon_contact .icon_list .item:last-child{
+    margin-right: 0;
+}
+
+.footer_main .icon_contact .icon_list .item a{
+    text-decoration: none;
+}
+
+.footer_main .icon_contact .icon_list .item a i{
+    font-size:18px;
+    color: #424242;
+}
+
+.footer_main .icon_contact .text_author{
+    font-size: 14px;
+    color: var(--col_1);
 }

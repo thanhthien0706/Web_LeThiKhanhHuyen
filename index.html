@@ -34,140 +34,545 @@
 
     <!-- background -->
     <div class="box_bg_main">
-        <video id="video_background" preload="auto" autoplay="true" loop="loop" muted volume="0">
+        <video id="video_background" autoplay loop muted>
             <source src="./access/image/video_bg/bg.mp4" type="video/mp4" />
         </video>
+        
     </div>
-
     <!-- web home main -->
     <div id="box_main">
 
-        <!-- heading web -->
-        <header class="header_main">
-            <div class="container_edit">
-                <!-- logo -->
-                <div class="box_logo">
-                    <p class="text_logo">
-                        <a href="#">
-                            FRAIS
-                        </a>
-                    </p>
-                </div>
+    <!-- heading web -->
+    <header class="header_main">
+        <div class="container_edit">
+            <!-- logo -->
+            <div class="box_logo">
+                <p class="text_logo">
+                    <a href="#">
+                        FRAIS
+                    </a>
+                </p>
+            </div>
 
-                <!-- nav -->
-                <div class="box_nav">
-                    <ul class="box_menu">
-                        <li class="item_menu action_menu"><a href="#">HOME</a></li>
-                        <li class="item_menu"><a href="#">SHOP ALL</a></li>
-                        <li class="item_menu"><a href="#">FOR BODY</a></li>
-                        <li class="item_menu"><a href="#">ABOUT</a></li>
-                        <li class="item_menu"><a href="#">CONTACT</a></li>
-                    </ul>
+            <!-- nav -->
+            <div class="box_nav">
+                <ul class="box_menu">
+                    <li class="item_menu action_menu"><a href="#">HOME</a></li>
+                    <li class="item_menu"><a href="#">SHOP ALL</a></li>
+                    <li class="item_menu"><a href="#">FOR BODY</a></li>
+                    <li class="item_menu"><a href="#">ABOUT</a></li>
+                    <li class="item_menu"><a href="#">CONTACT</a></li>
+                </ul>
 
-                    <div class="box_enforcement">
+                <div class="box_enforcement">
 
-                        <form action="#" class="box_from item_layout">
-                            <div class="box_form--content">
-                                <input type="text" placeholder="SEARCH...">
-                                <button class="btn_search">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </form>
-
-                        <div class="box_login item_layout">
-                            <button class="btn_login" onclick="openUser()">
-                                <div class="icon">
-                                    <i class="fas fa-user"></i>
-                                </div>
-                               <p class="text_login">Log In</p>
+                    <form action="#" class="box_from item_layout">
+                        <div class="box_form--content">
+                            <input type="text" placeholder="SEARCH...">
+                            <button class="btn_search">
+                                <i class="fas fa-search"></i>
                             </button>
                         </div>
+                    </form>
 
-                        <div class="box_cart item_layout">
-                            <i class="fas fa-shopping-cart " onclick="openNav('openCart')"></i>
+                    <div class="box_login item_layout">
+                        <button class="btn_login" onclick="openUser()">
+                            <div class="icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                           <p class="text_login">Log In</p>
+                        </button>
+                    </div>
+
+                    <div class="box_cart item_layout">
+                        <i class="fas fa-shopping-cart " onclick="openNav('openCart')"></i>
+                    </div>
+
+                    <!-- box chứa cart -->
+                    <div class="box_cart--open">
+                        <!-- open-cart -->
+                        <div id="openCart" class="box_openCart">
+                            <div class="box_header">
+                                <i class="fas fa-chevron-right" onclick="closeNav('openCart')" ></i>
+                                <p class="text_header">Cart</p>
+                            </div>
+                            <div class="box_body">
+                                <p class="text_body">
+                                    Cart is empty
+                                </p>
+                            </div>
+                        </div>
+                        <!-- layout mờ -->
+                        <div id="modaCart" class="box_modal--cart" onclick="closeNav('openCart')"></div>
+                    </div>
+
+                    <!-- box chứa login -->
+
+                    <!-- face và google -->
+                    <div id="boxLogin" class="box_login--open">
+
+                        <div class="box_icon_close">
+                            <i class="fas fa-times" onclick="closeUser()"></i>
                         </div>
 
-                        <!-- box chứa cart -->
-                        <div class="box_cart--open">
-                            <!-- open-cart -->
-                            <div id="openCart" class="box_openCart">
-                                <div class="box_header">
-                                    <i class="fas fa-chevron-right" onclick="closeNav('openCart')" ></i>
-                                    <p class="text_header">Cart</p>
+                        <div id="mainUser" class="box_main--user">
+                            <div class="box-header">
+                                <h2 class="header-title">LOG IN</h2>
+                                <p class="header-text" > <span class="text_chuyen">New to this site?</span> <a href="#" class="chuyen_doi--user" >Sign Up</a> </p>  
+                            </div>
+                            <div class="box-body">
+                                <div class="box_with box_with--1">
+                                    <i class="fab fa-facebook-square"></i>
+                                    <p class="text-content"> <span class="text_chuyen_with">Log in</span> with Facebook</p>
                                 </div>
-                                <div class="box_body">
-                                    <p class="text_body">
-                                        Cart is empty
-                                    </p>
+                                <div class="box_with box_with--2">
+                                    <i class="fab fa-google"></i>
+                                    <p class="text-content"> <span class="text_chuyen_with">Log in</span> with Google</p>
                                 </div>
                             </div>
-                            <!-- layout mờ -->
-                            <div id="modaCart" class="box_modal--cart" onclick="closeNav('openCart')"></div>
+                            <div class="box-footer">
+                                <span class="text">or</span>
+                                <button id="btnChuyenEmail" class="btn-with-Email"><span class="text_chuyen_with">Log in</span> with Email</button>
+                            </div>
                         </div>
 
-                        <!-- box chứa login -->
+                        <!-- email -->
 
-                        <!-- face và google -->
-                        <div id="boxLogin" class="box_login--open">
-
-                            <div class="box_icon_close">
-                                <i class="fas fa-times" onclick="closeUser()"></i>
+                        <div id="withEmail" class="box_main--email">
+                            <div class="box-header">
+                                <h2 class="header-title header-title-1 ">LOG IN</h2>
+                                <p class="header-text" > <span class="text_ans-email">New to this site?</span>  <a href="#" class="text_email chuyen_text--email" >Sign Up</a> </p>  
                             </div>
-
-                            <div id="mainUser" class="box_main--user">
-                                <div class="box-header">
-                                    <h2 class="header-title">LOG IN</h2>
-                                    <p class="header-text" > <span class="text_chuyen">New to this site?</span> <a href="#" class="chuyen_doi--user" >Sign Up</a> </p>  
-                                </div>
-                                <div class="box-body">
-                                    <div class="box_with box_with--1">
-                                        <i class="fab fa-facebook-square"></i>
-                                        <p class="text-content"> <span class="text_chuyen_with">Log in</span> with Facebook</p>
+                            <div class="box-body">
+                                <form action="" class="form_emai">
+                                    <div class="box_input">
+                                        <label for="" class="lb">Email</label>
+                                        <input type="text" class="input">
                                     </div>
-                                    <div class="box_with box_with--2">
-                                        <i class="fab fa-google"></i>
-                                        <p class="text-content"> <span class="text_chuyen_with">Log in</span> with Google</p>
+                                    <div class="box_input">
+                                        <label for="" class="lb">Password</label>
+                                        <input type="text" class="input">
                                     </div>
-                                </div>
-                                <div class="box-footer">
-                                    <span class="text">or</span>
-                                    <button id="btnChuyenEmail" class="btn-with-Email"><span class="text_chuyen_with">Log in</span> with Email</button>
-                                </div>
+                                    <input type="submit" class="btn_submit" value="Log In">
+                                </form>
                             </div>
-
-                            <!-- email -->
-
-                            <div id="withEmail" class="box_main--email">
-                                <div class="box-header">
-                                    <h2 class="header-title">LOG IN</h2>
-                                    <p class="header-text" >New to this site? <a href="#" class="chuyen_doi--user" >Sign Up</a> </p>  
-                                </div>
-                                <div class="box-body">
-                                </div>
-                                <div class="box-footer">
-                                </div>
+                            <div class="box-footer">
+                                <span class="box_footer--with">or <span class="chuyen_doi--01">sign up</span> with</span>
+                                <p class="item_icon">
+                                    <i class="fab fa-facebook-square item" onclick="chuyenCheDo()"></i>
+                                    <img src="./access/image/icon/logo_gg.png" alt="" onclick="chuyenCheDo()">
+                                </p>
                             </div>
-
                         </div>
 
                     </div>
 
                 </div>
+
             </div>
-        </header>
+        </div>
+    </header>
 
-        <!-- content main web -->
-        <section class="box_content_main">
+    <!-- content main web -->
+    <section class="box_content_main">
+        <div class="container_new--edit">
+            <div class="box_header--content">
+                <h1>SCENTED CANDLES</h1>
+                <p>Our naturally fragranced candles come in plastic-free, high quality containers</p>
+            </div>
+            <div class="box_grib--10 box_line">
 
-        </section>
+                <!-- item 1 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-1.jpg" alt="">
+                            <a href="#">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
 
-        <!-- footer web -->
-        <footer class="footer_main">
+                        <div class="box_text_content">
+                            <p class="text--name">Vanilla</p>
+                            <p class="text--price">30₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus"></i>
+                                <input class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
 
-        </footer>
+                    </div>
+                </div>
+
+                <!-- item 2 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-2.jpg" alt="">
+                            <a href="#">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Three Rose</p>
+                            <p class="text--price">40₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus"></i>
+                                <input class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- item 3 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-3.jpg" alt="">
+                            <a href="#">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Aromatic Blend</p>
+                            <p class="text--price">30₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus"></i>
+                                <input class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- item 4 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-4.jpg" alt="">
+                            <a href="#">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Coco & Sandalwood</p>
+                            <p class="text--price">40₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus"></i>
+                                <input class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- item 5 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-5.jpg" alt="">
+                            <a href="#">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Orange & Bergamot</p>
+                            <p class="text--price">40₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus"></i>
+                                <input class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- item 6 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-6.jpg" alt="">
+                            <a href="#">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Lavender</p>
+                            <p class="text--price">30₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus"></i>
+                                <input class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- item 7 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-7.jpg" alt="">
+                            <a href="#">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Organic Beeswax</p>
+                            <p class="text--price">30₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus"></i>
+                                <input class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- item 8 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-8.jpg" alt="">
+                            <a href="#">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Soy</p>
+                            <p class="text--price">30₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus"></i>
+                                <input class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- item 9 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-9.jpg" alt="">
+                            <a href="#">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Star Anise & Lily</p>
+                            <p class="text--price">40₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus"></i>
+                                <input class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- item 10 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-10.jpg" alt="">
+                            <a href="#">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Lemon Coco</p>
+                            <p class="text--price">15₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus"></i>
+                                <input class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- item 11 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-11.jpg" alt="">
+                            <a href="#">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Rose Water</p>
+                            <p class="text--price">15₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus"></i>
+                                <input class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- itemm 12 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-12.jpg" alt="">
+                            <a href="#">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Honey</p>
+                            <p class="text--price">15₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus"></i>
+                                <input class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer web -->
+    <footer class="footer_main">
+        <div class="container_new--edit">
+            <div class="box_grib--10 ">
+                <div class="item_grib--10 item_grib--w4 flex-1">
+                    <div class="box_main--content">
+                        <h2 class="title_footer">FRAIS</h2>
+                        <a href="#"> <p class="text_footer">HOME</p></a>
+                        <a href="#"> <p class="text_footer">SHOP ALL</p></a>
+                        <a href="#"> <p class="text_footer">FOR BODY</p></a>
+                        <a href="#"> <p class="text_footer">ABOUT</p></a>
+                        <a href="#"> <p class="text_footer">CONTACT</p></a>
+                    </div>
+                </div>
+                <div class="item_grib--10 item_grib--w4 flex-1">
+                    <div class="box_main--content">
+                        <h2 class="title_footer">HELP</h2>
+                        <a href="#"><p class="text_footer">SHIPPING & RETURNS </p></a>
+                        <a href="#"><p class="text_footer">STORE POLICY </p></a>
+                        <a href="#"><p class="text_footer">PAYMENT METHODS </p></a>
+                        <a href="#"><p class="text_footer">FAQ</p></a>
+                    </div>
+                </div>
+                <div class="item_grib--10 item_grib--w4 flex-1">
+                    <div class="box_main--content">
+                        <h2 class="title_footer">CONTACT</h2>
+                        <p class="text_footer">0914332740 </p>
+                        <p class="text_footer">ltkhanhhuyen.10102001@gmail.com</p>
+                    </div>
+                </div>
+                <div class="item_grib--10 item_grib--w4 flex-2">
+                    <div class="box_main--content">
+                        <div class="box_inf">
+                            <h2 class="title_footer">NEWSLETTER</h2>
+                            <form action="" class="inputEmail">
+                                <label for="" class="lbName">Enter Email*</label>
+                                <input type="text" class="inputText" placeholder="Email">
+                                <input type="submit" class="btnSubmit" value="SUBSCRIBE">
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="icon_contact">
+                <ul class="icon_list">
+                    <li class="item">
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <p class="text_author">
+                    © 2021 by Frais. Lê Thị Khánh Huyền
+                </p>
+
+            </div>
+
+        </div>
+    </footer>
 
     </div>
+    
 
     <script src="./access/js/my_js.js"></script>
 

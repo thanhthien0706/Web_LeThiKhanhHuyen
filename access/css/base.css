@@ -15,18 +15,24 @@ html {
 
 body {
     font-family:'Roboto', sans-serif;
+    /* position: relative; */
+    
+}
+
+.box_bg_main{
+    /* position: relative;
+    width: 100%;
+    min-height: 100vh; */
 }
 
 #video_background {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1000;
-    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .container_edit{
@@ -37,4 +43,44 @@ body {
     max-width: 1260px;
     width: 100%;
     margin: 0 auto;
+}
+
+.container_new--edit{
+    max-width:  1200px;
+    width: 65%;
+    margin: 0 auto;
+}
+
+/* grid 10px */
+
+.box_grib--10{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.item_grib--10{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.item_grib--w3{
+    width: 33.3333333%;
+}
+
+.item_grib--w4{
+    width: 25%;
+}
+
+/* flex */
+
+.flex-1{
+    flex: 1;
+}
+
+.flex-2{
+    flex: 2;
 }
