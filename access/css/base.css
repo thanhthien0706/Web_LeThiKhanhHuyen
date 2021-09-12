@@ -1,0 +1,39 @@
+:root{
+    --col_1: #576855;
+
+    /* font */
+    --font1: lulo-clean-w01-one-bold,sans-serif;
+    --font2: baskervillemtw01-smbdit,serif;
+
+    /* transision */
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+}
+
+#video_background {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    overflow: hidden;
+}
+
+.container_edit{
+    /* margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 120px - 120px);
+    min-width: 980px; */
+    max-width: 1260px;
+    width: 100%;
+    margin: 0 auto;
+}

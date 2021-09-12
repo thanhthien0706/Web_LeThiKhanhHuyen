@@ -1,0 +1,109 @@
+/* ============================ */
+/* CSS HEADER */
+/* ============================ */
+
+.header_main{
+    padding: 40px 0 0 0;
+}
+
+/* css logo */
+.header_main .box_logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.header_main .box_logo .text_logo{
+    font-family: var(--font1);
+    font-weight:800;
+    font-size: 1.8125rem;
+    padding: 10px 35px;
+    background-color:white;
+    border: 8px solid #424242;
+    
+    letter-spacing: 0.37em;
+}
+.header_main .box_logo .text_logo a{
+    color: #424242;
+    text-decoration: none;
+    outline: none;
+}
+
+/* css nav */
+
+.header_main .box_nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0 10px;
+}
+
+.header_main .box_nav .box_menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_main .box_nav .box_menu .item_menu{
+    padding: 18px 25px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.header_main .box_nav .box_menu .item_menu::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    background-color: #000 ;
+    bottom: 0;
+    left: 0;
+}
+
+.header_main .box_nav .box_menu .item_menu:hover {
+    cursor: pointer;
+    background-color: #ffd9e4;
+    transition: 0.5s;
+}
+
+.header_main .box_nav .box_menu .item_menu:hover::before{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.header_main .box_nav .box_menu .item_menu a{
+    font-family: var(--font2);
+    text-decoration: none;
+    font-size: 16px;
+    color: #474747;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.header_main .box_nav .box_menu .item_menu:hover a{
+    color: #e33493;
+    transition: 0.5s;
+}
+
+.header_main .box_nav .box_enforcement{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+.header_main .box_nav .box_menu .action_menu{
+    background-color: #ffd9e4;
+}
+
+.header_main .box_nav .box_menu .item_menu.action_menu::before{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.header_main .box_nav .box_menu .action_menu a{
+    color: #e33493;
+}
