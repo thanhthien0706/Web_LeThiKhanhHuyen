@@ -1,3 +1,8 @@
+/* ================== background ============================ */
+body {
+    background-color: white;
+}
+
 /* ============================ */
 /* CSS HEADER */
 /* ============================ */
@@ -41,7 +46,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: #fafafa;
     padding: 0 10px;
 }
 
@@ -534,106 +539,409 @@
 /* CSS BODY CONTENT*/
 /* ============================ */
 
-
-
 .box_content_main{
-    padding: 60px 0 0;
-    /* position: relative; */
+    padding: 50px 0;
 }
 
-.box_content_main .box_header--content{
+.box_content_main .box_main--path{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 64px;
-}
-
-.box_content_main .box_header--content h1{
-    text-align: center;
-    /* margin-bottom: 50px; */
-    letter-spacing: 0.3em;
-    font-size: 55px;
-    font-weight: 800;
-    color: var(--col_1);
-    /* text-shadow: #ffffff 3px 3px 0px, rgb(0 0 0 / 20%) 6px 6px 0px; */
-}
-
-.box_content_main .box_header--content p{
-    text-align: center;
-    font-size :21px;
-    letter-spacing:0.15em;
-    color: var(--col_1);
-}
-
-/* css phần content chính */
-
-.box_contact .box_main_content--contact .text_1{
-    font-size: 16px;
-    color: #424242;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 50px;
-    line-height:1.6;
 }
 
-.box_contact .box_main_content--contact .list_inf .item_text{
-    margin-bottom:20px;
+.box_content_main .box_main--path .list_path{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.box_contact .box_main_content--contact .list_inf .item_text .title_inf{
+.box_content_main .box_main--path .list_path .item_path{
+    margin-right: 15px;
+    position: relative;
+}
+
+.box_content_main .box_main--path .list_path .item_path a{
+    text-decoration: none;
+    font-size:14px;
+    color: #424242;
+}
+
+.box_content_main .box_main--path .list_path .item_path:last-child{
+    margin-right: 0;
+}
+
+.box_content_main .box_main--path .list_path .item_path::after{
+    content: "/";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -10px ;
+}
+.box_content_main .box_main--path .list_path .item_path:last-child::after{
+    content: "";
+    position: absolute;
+}
+
+.box_content_main .box_main--path .list_next_site{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box_content_main .box_main--path .list_next_site .item_next_site{
+    margin-right: 15px;
+}
+
+.box_content_main .box_main--path .list_next_site .item_next_site a{
+    text-decoration: none;
+    font-size: 14px;
     letter-spacing:2px;
+    color: #424242;
 }
 
-.box_contact .box_main_content--contact .list_inf .item_text p{
-    font-size: 16px;
-    color: var(--col_1);
+.box_content_main .box_main--path .list_next_site .item_next_site:first-child{
+    position: relative;
 }
 
-.box_contact .box_form_main{
-    padding:30px 20px;
-    background-color: white;
+.box_content_main .box_main--path .list_next_site .item_next_site:first-child::after{
+    content: "|";
+    position: absolute;
+    right: -10px;
 }
 
-/* chữ chung form  */
+.box_inf_product{
+    margin-bottom: 50px;
+}
 
-.text_size--from{
-    font-family: georgia,palatino,'book antiqua','palatino linotype',serif;
-    font-style: italic;
+.box_inf_product .box_left .box_img{
+    margin-bottom: 50px;
+}
+
+.box_inf_product .box_left .box_img img{
+    width: 100%;
+    height: 500px;
+}
+
+.box_inf_product .box_left .box_text p{
+    line-height: 1.6;
     color: #424242;
     font-size:15px;
 }
 
-.box_input--content{
-    border: none;
-    padding: 6px 0;
-    width: 100%;
-    outline: none;
-    border-bottom: 1px solid #424242;
+.box_inf_product .box_right{
+    margin-right: 90px;
 }
 
-.text_input::-webkit-input-placeholder{
-    font-size: 12px;
-    color: var(--col_1);
+.box_inf_product .box_right .box_inf_name-quantity{
+    margin-bottom: 30px;
 }
 
-.box_khoang_cach--lable {
+.box_inf_product .box_right .box_inf_name-quantity .name_product{
+    font-size: 26px;
+    font-weight:300;
+    color: #424242;
     margin-bottom: 10px;
 }
 
-.Khoang_cach_box_input{
-    margin-bottom:30px;
+.box_inf_product .box_right .box_inf_name-quantity .id_product{
+    font-size: 14px;
+    font-weight:300;
+    color: #424242;
+    margin-bottom: 20px;
 }
 
-.box_form_main .form .box_input--submit{
+.box_inf_product .box_right .box_inf_name-quantity .price{
+    font-size: 22px;
+    font-weight:500;
+    color: #424242;
+    margin-bottom: 20px;
+}
+
+.box_inf_product .box_right .box_inf_name-quantity .box_quantity{
+    font-size: 16px;
+    font-weight:300;
+    color: #424242;
+    margin-bottom: 20px;
+}
+
+.box_inf_product .box_right .box_inf_name-quantity .box_quantity .number{
+    margin-top: 10px;
+    padding: 8px 10px;
+}
+
+.box_inf_product .box_right .box_add{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.box_inf_product .box_right .box_add:hover{
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.box_inf_product .box_right .box_add .btn_add{
+    width: 100%;
+    margin-right:15px;
+    padding: 14px 0;
+    background-color: #576855;
     text-align: center;
+    text-decoration: none;
+    font-size:16px;
+    font-weight: 800;
+    color: #fff;
 }
 
-.box_form_main .form .box_input--submit .btn_submit {
-    padding: 15px 70px;
+.box_inf_product .box_right .box_add .box_icon_tim{
+    padding: 13px;
+    border: 1px solid #000;
+}
+
+
+.box_inf_product .box_right .box_buy a{
+    display: inline-block;
+    width: 100%;
+    padding: 14px 0;
+    background-color: #424242;
+    text-align: center;
+    text-decoration: none;
+    font-size:16px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.box_inf_product .box_right .box_buy a:hover{
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+/* box_slide-text */
+.an_hien{
+    display: none;
+}
+
+.box_inf_product .box_right .box_slide--text{
+    margin-top: 20px;
+    padding-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.box_inf_product .box_right .box_slide--text::after{
+    content:"";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(66, 66, 66,0.6);
+    bottom: 0;
+}
+
+.box_inf_product .box_right .box_slide--text .box_slide--header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    transition: 0.5s;
+}
+
+.box_inf_product .box_right .box_slide--text .box_slide--header:hover{
+    opacity: 0.7;
+}
+
+.box_inf_product .box_right .box_slide--text .box_slide--header .name{
+    /* font-weight: 300; */
+
+}
+
+.box_inf_product .box_right .box_slide--text .box_slide--header .mark_slide{
+    /* position: relative; */
+}
+
+.box_slide--text .box_slide--header .mark_slide .mark_slide-1{
+    /* position: absolute; */
+    width: 15px;
+    height: 2px;
+    background-color:#424242;
+}
+
+.box_slide--text .box_slide--header .mark_slide .mark_slide-2{
+    /* position: absolute; */
+    width: 15px;
+    height: 2px;
+    background-color:#424242;
+    transform: rotate(90deg) translate(-2px, 0px);
+}
+
+.box_inf_product .box_right .box_slide--text .text{
+    line-height: 1.6;
+    color: rgba(66, 66, 66,0.8);
+    display: none;
+}
+
+/* Related Products */
+
+.box_Related_Products .box_header{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.box_Related_Products .box_header .title{
+    font-size:26px;
+    color: #424242;
+} 
+
+/* css sản phẩm xem thêm */
+
+.with_san_pham{
+    width: 210px;
+}
+
+.khoang_cach_sa_pham{
+    margin: 0 10px;
+}
+
+/* .height_san_pham{
+    min-height: 368px;
+} */
+
+.san_pham--xem-them{
+    /* display: flex;
+    flex-direction: row;
+    align-items: center; */
+    position: relative;
+}
+
+.san_pham--xem-them .slick-prev{
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size:20px;
+    cursor: pointer;
+    color: #424242;
+}
+
+.san_pham--xem-them .slick-next{
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size:20px;
+    cursor: pointer;
+    color: #424242;
+}
+
+.box_content_main .box_content{
+    min-height: 368px;
+}
+
+.box_content_main .box_content .box_main--img{
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    position: relative;
+    /* margin-bottom: 20px; */
+}
+
+.box_content_main .box_content .box_main--img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s ease-in-out;
+
+}
+
+.box_content_main .box_content .box_main--img .box_view--inf{
+    position: absolute;
+    bottom: -55px;
+    width: 100%;
+    text-align: center;
+    background-color:rgba(255,255,255,0.5);
+    padding: 20px 0;
+    transition: 0.6s ease-in-out;
+}
+
+.box_content_main .box_content .box_main--img .box_view--inf .text--view{
+    font-size: 14px;
+    color: #000;
+}
+
+.box_content_main .box_content .box_main--img:hover img{
+    cursor: pointer;
+    transform: scale(1.3);
+    cursor: pointer;
+
+}
+
+.box_content_main .box_content .box_main--img:hover .box_view--inf{
+    bottom: 0;
+}
+
+/* css content text sản phẩm */
+
+.box_content .box_text_content{
+    padding: 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box_content .box_text_content .text--name{
+    margin-bottom: 12px;
+    color: #424242;
+    font-size: 16px;
+}
+
+.box_content .box_text_content .text--price{
+    color: var(--col_1);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.box_content .box_text_content .box_add--sp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color:white;
+    border: 1px solid #000;
+    margin-bottom: 12px;
+}
+
+.box_content .box_text_content .box_add--sp .input_add--sp{
+    text-align:center;
     border: none;
-    font-size: 18px;
-    font-weight:800;
-    letter-spacing:2px;
-    color: white;
+    outline: none;
+    background: none;
+}
+
+.box_content .box_text_content .box_add--sp .item{
+    font-size:14px;
+    cursor: pointer;
+}
+
+.box_content .box_text_content .btn_addSp{
+    padding: 8px 0;
     background-color: var(--col_1);
+    border: none;
+    font-weight: 800;
+    color: white;
+    outline: none;
+    transition: 0.8s;
+
+}
+
+.box_content .box_text_content .btn_addSp:hover{
+    opacity: 0.9;
 }
 
 
@@ -684,7 +992,7 @@
 
 .footer_main .box_main--content  .inputEmail{
     padding: 20px ;
-    background-color:white;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;

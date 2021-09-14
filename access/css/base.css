@@ -84,3 +84,24 @@ body {
 .flex-2{
     flex: 2;
 }
+
+/* làm mờ chữ */
+.tex_mo{
+    opacity: 0.8;
+}
+
+/* line  */
+.box_line{
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.box_line:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--col_1);
+    bottom: 0;
+    left: 0;
+}
