@@ -85,9 +85,34 @@ body {
     flex: 2;
 }
 
-/* làm mờ chữ */
+.flex-align-center{
+    align-items: center;
+}
+
+.flex-align-end{
+    align-items: flex-end;
+}
+
+.flex-align-start{
+    align-items: flex-start;
+}
+
+.flex-row-reverse{
+    flex-direction: row-reverse;
+}
+
+
+/* đinh dạng text */
 .tex_mo{
     opacity: 0.8;
+}
+
+.text_end{
+    text-align: end;
+}
+
+.text_start{
+    text-align: start;
 }
 
 /* line  */
@@ -104,4 +129,16 @@ body {
     background-color: var(--col_1);
     bottom: 0;
     left: 0;
+}
+
+/* css cho chữ */
+.viet_hoa{
+    text-transform: uppercase;
+}
+
+.title_text{
+    font-size: 48px;
+    color: #576855;
+    letter-spacing: 8px;
+    font-weight: 800;
 }

@@ -148,3 +148,10 @@ function closeboxChat() {
     btnMessChat.style.display='block';
 }
 
+// jquery
+$(document).ready(function() {
+    $('#btn-an-hien').click(function(){
+        $("#box_an_hien").toggle(1000);
+        // console.log("hello vào rồi nha");
+    })
+})
