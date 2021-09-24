@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP ALL</title>
+
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- icon -->
+    <link rel="stylesheet" href="./access/icon/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css">
+
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./access/css/reset.css">
+    <link rel="stylesheet" href="./access/css/base.css">
+    <link rel="stylesheet" href="./access/css/page/shop_all.css">
+
+</head>
+
+<body>
+
+    <!-- background -->
+    <div class="box_bg_main">
+        <video id="video_background" autoplay loop muted>
+            <source src="./access/image/video_bg/bg.mp4" type="video/mp4" />
+        </video>
+        
+    </div>
+    <!-- web home main -->
+    <div id="box_main">
+
+    <!-- heading web -->
+    <header class="header_main">
+        <div class="container_edit">
+            <!-- logo -->
+            <div class="box_logo">
+                <p class="text_logo">
+                    <a href="./index.html">
+                        FRAIS
+                    </a>
+                </p>
+            </div>
+
+            <!-- nav -->
+            <div class="box_nav">
+                <ul class="box_menu">
+                    <li class="item_menu "><a href="./home.html">HOME</a></li>
+                    <li class="item_menu action_menu"><a href="./shop_all.html">SHOP ALL</a></li>
+                    <li class="item_menu"><a href="./for_body.html">FOR BODY</a></li>
+                    <li class="item_menu"><a href="./about.html">ABOUT</a></li>
+                    <li class="item_menu"><a href="./contact.html">CONTACT</a></li>
+                </ul>
+
+                <div class="box_enforcement">
+
+                    <form action="#" class="box_from item_layout">
+                        <div class="box_form--content">
+                            <input type="text" placeholder="SEARCH...">
+                            <button class="btn_search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="box_login item_layout">
+                        <button class="btn_login" onclick="openUser()">
+                            <div class="icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                           <p class="text_login">Log In</p>
+                        </button>
+                    </div>
+
+                    <div class="box_cart item_layout">
+                        <i class="fas fa-shopping-cart " onclick="openNav('openCart')"></i>
+                    </div>
+
+                    <!-- box chứa cart -->
+                    <div class="box_cart--open">
+                        <!-- open-cart -->
+                        <div id="openCart" class="box_openCart">
+                            <div class="box_header">
+                                <i class="fas fa-chevron-right" onclick="closeNav('openCart')" ></i>
+                                <p class="text_header">Cart</p>
+                            </div>
+                            <div class="box_body">
+                                <div class="box_main_product_cart">
+                                    <div class="box_row">
+                                        <div class="box_content flex-1">
+                                            <div class="box-box_inf_product">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="box_img">
+                                                            <img class="img_inf_product" src="./access/image/img_sp/img-14.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8">
+1
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box_price ">
+                                            2
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box_footer">
+                                <button class="btn_view-cart">View Cart</button>
+                            </div>
+                        </div>
+                        <!-- layout mờ -->
+                        <div id="modaCart" class="box_modal--cart" onclick="closeNav('openCart')"></div>
+                    </div>
+
+                    <!-- box chứa login -->
+
+                    <!-- face và google -->
+                    <div id="boxLogin" class="box_login--open">
+
+                        <div class="box_icon_close">
+                            <i class="fas fa-times" onclick="closeUser()"></i>
+                        </div>
+
+                        <div id="mainUser" class="box_main--user">
+                            <div class="box-header">
+                                <h2 class="header-title">LOG IN</h2>
+                                <p class="header-text" > <span class="text_chuyen">New to this site?</span> <a href="#" class="chuyen_doi--user" >Sign Up</a> </p>  
+                            </div>
+                            <div class="box-body">
+                                <div class="box_with box_with--1">
+                                    <i class="fab fa-facebook-square"></i>
+                                    <p class="text-content"> <span class="text_chuyen_with">Log in</span> with Facebook</p>
+                                </div>
+                                <div class="box_with box_with--2">
+                                    <i class="fab fa-google"></i>
+                                    <p class="text-content"> <span class="text_chuyen_with">Log in</span> with Google</p>
+                                </div>
+                            </div>
+                            <div class="box-footer">
+                                <span class="text">or</span>
+                                <button id="btnChuyenEmail" class="btn-with-Email"><span class="text_chuyen_with">Log in</span> with Email</button>
+                            </div>
+                        </div>
+
+                        <!-- email -->
+
+                        <div id="withEmail" class="box_main--email">
+                            <div class="box-header">
+                                <h2 class="header-title header-title-1 ">LOG IN</h2>
+                                <p class="header-text" > <span class="text_ans-email">New to this site?</span>  <a href="#" class="text_email chuyen_text--email" >Sign Up</a> </p>  
+                            </div>
+                            <div class="box-body">
+                                <form action="" class="form_emai">
+                                    <div class="box_input">
+                                        <label for="" class="lb">Email</label>
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="box_input">
+                                        <label for="" class="lb">Password</label>
+                                        <input type="text" class="input">
+                                    </div>
+                                    <input type="submit" class="btn_submit" value="Log In">
+                                </form>
+                            </div>
+                            <div class="box-footer">
+                                <span class="box_footer--with">or <span class="chuyen_doi--01">sign up</span> with</span>
+                                <p class="item_icon">
+                                    <i class="fab fa-facebook-square item" onclick="chuyenCheDo()"></i>
+                                    <img src="./access/image/icon/logo_gg.png" alt="" onclick="chuyenCheDo()">
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- content main web -->
+    <section class="box_content_main">
+        <div class="container_new--edit">
+            <div class="box_header--content">
+                <h1>ALL PRODUCTS</h1>
+                <p>Made of natural and organic ingredients</p>
+            </div>
+            <div class="box_grib--10 box_line">
+
+                <!-- item 13 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-13.jpg" alt="">
+                            <a href="./SP_13.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Coconut Milk</p>
+                            <p class="text--price">20₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_13')"></i>
+                                <input id="add_13" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_13')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- item 14 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-14.jpg" alt="">
+                            <a href="./SP_13.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Jasmine</p>
+                            <p class="text--price">10₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_14')"></i>
+                                <input id="add_14" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_14')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- item 15 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-15.jpg" alt="">
+                            <a href="./SP_15.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Tar</p>
+                            <p class="text--price">10₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_15')"></i>
+                                <input id="add_15" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_15')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- item 16 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-16.jpg" alt="">
+                            <a href="./SP_16.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Green Clay</p>
+                            <p class="text--price">20₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_16')"></i>
+                                <input id="add_16" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_16')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- item 17 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-17.jpg" alt="">
+                            <a href="./SP_17.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Bitter Almond</p>
+                            <p class="text--price">10₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_17')"></i>
+                                <input id="add_17" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_17')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- item 18 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-18.jpg" alt="">
+                            <a href="./SP_18.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Pink Anemone</p>
+                            <p class="text--price">20₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_18')"></i>
+                                <input id="add_18" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_18')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- item 19 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-19.jpg" alt="">
+                            <a href="./SP_19.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Honey</p>
+                            <p class="text--price">10₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_19')"></i>
+                                <input id="add_19" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_19')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- item 20 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-20.jpg" alt="">
+                            <a href="./SP_20.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Pearl Powder</p>
+                            <p class="text--price">20₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_20')"></i>
+                                <input id="add_20" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_20')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- item 21 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-21.jpg" alt="">
+                            <a href="./SP_21.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Laurel</p>
+                            <p class="text--price">20₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_21')"></i>
+                                <input id="add_21" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_21')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- item 1 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-1.jpg" alt="">
+                            <a href="./SP_1.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Vanilla</p>
+                            <p class="text--price">30₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_01')"></i>
+                                <input id="add_01" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_01')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- item 2 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-2.jpg" alt="">
+                            <a href="./SP_2.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Three Rose</p>
+                            <p class="text--price">40₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_02')"></i>
+                                <input id="add_02" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_02')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- item 3 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-3.jpg" alt="">
+                            <a href="./SP_3.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Aromatic Blend</p>
+                            <p class="text--price">30₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_03')" ></i>
+                                <input id="add_03" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_03')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- item 4 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-4.jpg" alt="">
+                            <a href="./SP_4.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Coco & Sandalwood</p>
+                            <p class="text--price">40₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_04')" ></i>
+                                <input id="add_04" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_04')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- item 5 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-5.jpg" alt="">
+                            <a href="./SP_5.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Orange & Bergamot</p>
+                            <p class="text--price">40₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_05')" ></i>
+                                <input id="add_05" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_05')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- item 6 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-6.jpg" alt="">
+                            <a href="./SP_6.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Lavender</p>
+                            <p class="text--price">30₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_06')" ></i>
+                                <input id="add_06" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_06')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- item 7 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-7.jpg" alt="">
+                            <a href="./SP_7.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Organic Beeswax</p>
+                            <p class="text--price">30₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_07')" ></i>
+                                <input id="add_07" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_07')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- item 8 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-8.jpg" alt="">
+                            <a href="./SP_8.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Soy</p>
+                            <p class="text--price">30₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_08')" ></i>
+                                <input id="add_08" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_08')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- item 9 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-9.jpg" alt="">
+                            <a href="./SP_9.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Star Anise & Lily</p>
+                            <p class="text--price">40₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_09')" ></i>
+                                <input id="add_09" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_09')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- item 10 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-10.jpg" alt="">
+                            <a href="./SP_10.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Lemon Coco</p>
+                            <p class="text--price">15₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_10')" ></i>
+                                <input id="add_10" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_10')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- item 11 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-11.jpg" alt="">
+                            <a href="./SP_11.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Rose Water</p>
+                            <p class="text--price">15₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_11')" ></i>
+                                <input id="add_11" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_11')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+
+                <!-- itemm 12 -->
+                <div class="item_grib--10 item_grib--w3">
+                    <div class="box_content">
+                        <div class="box_main--img">
+                            <img src="./access/image/img_sp/img-12.jpg" alt="">
+                            <a href="./SP_12.html">
+                                <div class="box_view--inf">
+                                    <p class="text--view">Quick view</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="box_text_content">
+                            <p class="text--name">Honey</p>
+                            <p class="text--price">15₫</p>
+                            <div class="box_add--sp">
+                                <i class="item item_minus fas fa-minus" onclick="minusSL('#add_12')" ></i>
+                                <input id="add_12" class="input_add--sp" type="number" max=9999 min= 1 step=1 readonly value="1">
+                                <i class="item item_pluss  fas fa-plus" onclick="plussSL('#add_12')"></i>
+                            </div>
+                            <button class="btn_addSp">ADD TO CART</button>
+                        </div>
+
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer web -->
+    <footer class="footer_main">
+        <div class="container_new--edit">
+            <div class="box_grib--10 ">
+                <div class="item_grib--10 item_grib--w4 flex-1">
+                    <div class="box_main--content">
+                        <h2 class="title_footer">FRAIS</h2>
+                        <a href="./home.html"> <p class="text_footer">HOME</p></a>
+                        <a href="./shop_all.html"> <p class="text_footer">SHOP ALL</p></a>
+                        <a href="./for_body.html"> <p class="text_footer">FOR BODY</p></a>
+                        <a href="./about.html"> <p class="text_footer">ABOUT</p></a>
+                        <a href="./contact.html"> <p class="text_footer">CONTACT</p></a>
+                    </div>
+                </div>
+                <div class="item_grib--10 item_grib--w4 flex-1">
+                    <div class="box_main--content">
+                        <h2 class="title_footer">HELP</h2>
+                        <a href="#"><p class="text_footer">SHIPPING & RETURNS </p></a>
+                        <a href="#"><p class="text_footer">STORE POLICY </p></a>
+                        <a href="#"><p class="text_footer">PAYMENT METHODS </p></a>
+                        <a href="#"><p class="text_footer">FAQ</p></a>
+                    </div>
+                </div>
+                <div class="item_grib--10 item_grib--w4 flex-1">
+                    <div class="box_main--content">
+                        <h2 class="title_footer">CONTACT</h2>
+                        <p class="text_footer">0914332740 </p>
+                        <p class="text_footer">ltkhanhhuyen.10102001@gmail.com</p>
+                    </div>
+                </div>
+                <div class="item_grib--10 item_grib--w4 flex-2">
+                    <div class="box_main--content">
+                        <div class="box_inf">
+                            <h2 class="title_footer">NEWSLETTER</h2>
+                            <form action="" class="inputEmail">
+                                <label for="" class="lbName">Enter Email*</label>
+                                <input type="text" class="inputText" placeholder="Email">
+                                <input type="submit" class="btnSubmit" value="SUBSCRIBE">
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="icon_contact">
+                <ul class="icon_list">
+                    <li class="item">
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <p class="text_author">
+                    © 2021 by Frais. Lê Thị Khánh Huyền
+                </p>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- box message -->
+    <div class="box_main--message">
+        <div class="box_main_chat">
+            <div class="box_header">
+                <div class="item_name">
+                    <h2>FRAIS</h2>
+                    <ul class="list_active">
+                        <li class="dot">
+                            <i class="fas fa-circle"></i>
+                        </li>
+                        <li class="status">
+                            We’ll reply as soon as we can
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="box_close">
+                    <i class="fas fa-times" style="cursor: pointer;" onclick="closeboxChat()"></i>
+                </div>
+
+            </div>
+            <div class="box_body">
+                <div class="box_chat--text">
+                    <p> lê Thị Khánh Huyền</p>
+                    <p> lê Thị Khánh Huyền</p>
+                    <p> lê Thị Khánh Huyền</p>
+                    <p> lê Thị Khánh Huyền</p>
+                    <p> lê Thị Khánh Huyền</p>
+                    <p> lê Thị Khánh Huyền</p>
+                    <p> lê Thị Khánh Huyền</p>
+                    <p> lê Thị Khánh Huyền</p>
+                </div>
+            </div>
+            <div class="box_footer">
+                <ul class="list_input-send">
+                    <li>
+                        <input type="text"  placeholder="Type your message" class="input_text--chat">
+                    </li>
+                    <li>
+                        <i class="fas fa-paper-plane"></i>
+                    </li>
+                </ul>
+
+                <ul class="list_input-icon">
+                    <li>
+                        <i class="far fa-smile-beam"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-paperclip"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button class="btn_chat" onclick="openboxChat()">Let's Chat!</button>
+    </div>
+
+    </div>
+    
+
+    <script src="./access/js/my_js.js"></script>
+
+</body>
+
+</html>
