@@ -226,7 +226,6 @@
     color: white;
     background-color: #424242;
     position: relative;
-    height: 100px;
 }
 
 .box_openCart .box_header .text_header{
@@ -243,130 +242,13 @@
 }
 
 .box_openCart .box_body {
-    padding: 40px 30px ;
-    height: calc(100% - 100px - 114px);
-    /* text-align: center; */
+    padding: 40px 0 ;
+    text-align: center;
 }
 
-/* .box_openCart .box_body .text_body{
+.box_openCart .box_body .text_body{
     font-size:18px;
     color: #424242;
-} */
-
-.box_openCart .box_body .box_main_product_cart{
-    height: 100%;   
-}
-
-.box_openCart .box_body .box_main_product_cart .box_row{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.box_main_product_cart .box_row .box_content {
-
-}
-
-.box_main_product_cart .box_row .box_content .box_inf_product {
-
-}
-
-.box_main_product_cart .box_row .box_content .box_inf_product .row {
-    justify-content: center;
-    align-items: flex-start;
-    text-align: start;
-}
-
-.box_main_product_cart .box_row .box_content .box_inf_product .box_img .img_inf_product{
-    width: 100%;
-    height: 70px;   
-    object-fit: cover; 
-}
-
-.box_main_product_cart .box_row .box_content .box_inf_product .box_text{
-
-}
-
-.box_main_product_cart .box_row .box_content .box_inf_product .box_text .name_product{
-    font-size: 16px;
-    font-weight: lighter;
-    width: 90%;
-    word-break: break-word;
-    margin-bottom: 8px;
-    color: #999997;
-}
-
-.box_main_product_cart .box_row .box_content .box_inf_product .box_text .price{
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
-.box_main_product_cart .box_row .box_content .box_inf_product .box_text .box_add--sp{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px;
-    background-color:white;
-    border: 1px solid #000;
-    /* margin-bottom: 12px; */
-    height: 28px;
-    width: 114px;
-}
-
-.box_main_product_cart .box_row .box_content .box_inf_product .box_text .box_add--sp .input_add--sp{
-    text-align:center;
-    border: none;
-    outline: none;
-    background: none;
-}
-
-.box_main_product_cart .box_row .box_content .box_inf_product .box_text .box_add--sp .item{
-    font-size:14px;
-    cursor: pointer;
-}
-
-.box_main_product_cart .box_row .box_price{
-
-}
-
-.box_main_product_cart .box_row .box_price h2{
-    font-size:26px;
-    margin-bottom: 12px;
-}
-
-.box_main_product_cart .box_row .box_price p{
-    font-size:26px;
-}
-
-.box_openCart .box_footer{
-    box-sizing: border-box;
-    height: 114px;
-    padding: 40px 30px ;
-    position: relative;
-}
-
-.box_openCart .box_footer::before{
-    content:"";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: rgba(0,0,0,0.3);
-    top: 0;
-    left: 0;
-}
-
-.box_openCart .box_footer .btn_view-cart{
-    width: 100%;
-    height: 42px;
-    border: none;
-    background-color: rgba(131,156,128,1);
-    color: #fff;
-}
-
-.box_openCart .box_footer .btn_view-cart:hover{
-    opacity: 0.8;
-    transition: 0.5s;
 }
 
 .box_modal--cart{
@@ -686,7 +568,8 @@
     font-size: 55px;
     font-weight: 800;
     color: var(--col_1);
-    /* text-shadow: #ffffff 3px 3px 0px, rgb(0 0 0 / 20%) 6px 6px 0px; */
+    text-shadow: #ffffff 3px 3px 0px, rgb(0 0 0 / 20%) 6px 6px 0px;
+    font-family: var(--font2);
 }
 
 .box_content_main .box_header--content p{
@@ -855,7 +738,7 @@
     margin-bottom:10px;
     width: 100%;
     padding:10px;
-    border:4px solid#576855;
+    border:4px solid #576855;
 }
 
 .footer_main .box_main--content .inputEmail .btnSubmit{
@@ -1003,7 +886,7 @@
 
 }
 
-.box_main_chat .box_footer{
+.box_footer{
     padding: 20px;
     background-color:white;
     display: flex;
@@ -1014,7 +897,7 @@
     border-right: 2px solid #000;
 }
 
-.box_main_chat .box_footer .list_input-send{
+.box_footer .list_input-send{
     display: flex;
     flex-direction:row;
     align-items: center;
@@ -1022,24 +905,24 @@
     margin-bottom: 10px;
 }
 
-.box_main_chat .box_footer .list_input-send li{
+.box_footer .list_input-send li{
     color: #424242;
 }
 
-.box_main_chat .box_footer .list_input-send li input{
+.box_footer .list_input-send li input{
     width: 100%;
     border: none;
     outline: none;
 
 }
 
-.box_main_chat .box_footer .list_input-icon {
+.box_footer .list_input-icon {
     display: flex;
     flex-direction:row;
     align-items: center;
 }
 
-.box_main_chat .box_footer .list_input-icon li{
+.box_footer .list_input-icon li{
     margin-right: 10px;
     color: #424242;
 }
